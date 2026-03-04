@@ -53,7 +53,7 @@ app.post('/feedback', async (req, res) => {
 
 app.get('/feedback', async (req, res) => {
   if (!supabase) {
-    return res.status(500).json([])
+    return res.json([])
   }
   try {
     const { data, error } = await supabase
@@ -61,11 +61,11 @@ app.get('/feedback', async (req, res) => {
       .select('id,name,message,created_at')
       .order('created_at', { ascending: false })
     if (error) {
-      return res.status(500).json([])
+      return res.json([])
     }
     return res.json(data || [])
   } catch {
-    return res.status(500).json([])
+    return res.json([])
   }
 })
 
