@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP HealthCheck – Feedback Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MCP HealthCheck</h1>
+    <div id="health" class="health"></div>
+    <form id="feedback-form" class="form">
+      <input id="name" name="name" type="text" placeholder="Your name" required>
+      <input id="message" name="message" type="text" placeholder="Your message" required>
+      <button type="submit">Submit</button>
+    </form>
+    <h2>Feedback</h2>
+    <ul id="feedback-list" class="list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
